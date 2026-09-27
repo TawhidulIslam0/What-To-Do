@@ -1,0 +1,271 @@
+/* DestinationSearch.css */
+
+/* Main container for destination search interface */
+.destination-search-mode {
+  background: #80c6a8;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+/* Header with title and close button */
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.search-header h4 {
+  margin: 0;
+  color: #525252;
+  font-size: 1rem;
+}
+
+/* Close search button */
+.close-search-btn {
+  background: none;
+  border: none;
+  color: #525252;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-search-btn:hover {
+  background: #8eccb1;
+}
+
+/* Search input container */
+.search-input-container {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+/* Search input field */
+.search-input {
+  width: 100%;
+  background: #8eccb1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #525252;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  transition: all 0.3s ease;
+  font-family: inherit;
+  min-height: 48px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: #8eccb1;
+}
+
+.search-input::placeholder {
+  color: #fffef6;
+}
+
+/* Loading indicator during search */
+.search-loading {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.56) 0%,
+    rgba(113, 193, 157, 0.8) 100%
+  );
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+/* Search results dropdown */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #80c6a8;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  margin-top: 8px;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: overlay;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* Custom scrollbar styling */
+.search-results::-webkit-scrollbar {
+  width: 6px;
+}
+
+.search-results::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 4px 0;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.search-results {
+  scrollbar-width: none;
+}
+
+/* Fallback for browsers without overlay support */
+@supports not (overflow-y: overlay) {
+  .search-results {
+    overflow-y: auto;
+    padding-right: 2px;
+  }
+
+  .search-results::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .search-results::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .search-results::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+}
+
+/* Individual search result item */
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: white;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: #72c09e;
+  transform: translateX(4px);
+}
+
+/* Icon for search result items */
+.result-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* Details container for search results */
+.result-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-name {
+  color: #525252;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.result-address {
+  color: #666666;
+  font-size: 0.8rem;
+}
+
+/* Search options section */
+.search-options {
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Divider between search and map options */
+.option-divider {
+  color: #525252;
+  font-size: 0.8rem;
+  margin: 8px 0;
+  position: relative;
+}
+
+.option-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #aadac4;
+  z-index: 1;
+}
+
+/* Button for map selection mode */
+.map-selection-btn {
+  width: 100%;
+  background: #8eccb1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #525252;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  box-shadow: none;
+}
+
+.map-selection-btn:hover {
+  transform: translateY(-2px);
+  background: #8eccb1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .search-input {
+    padding: 14px 16px;
+    min-height: 52px;
+  }
+
+  .search-result-item {
+    padding: 14px 16px;
+  }
+}

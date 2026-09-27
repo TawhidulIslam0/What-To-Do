@@ -1,0 +1,235 @@
+/* Filter modal overlay background */
+.filter-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Main filter modal container */
+.filter-modal {
+  background: #fffef6;
+  border-radius: 16px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: overlay;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Custom scrollbar styling for modal */
+.filter-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.filter-modal::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.filter-modal::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.filter-modal::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.filter-modal {
+  scrollbar-width: none;
+}
+
+/* Filter modal header section */
+.filter-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+}
+
+.filter-modal-header h3 {
+  margin: 0;
+  color: #71c19d;
+  font-size: 1.3rem;
+}
+
+/* Close button for modal */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #666;
+}
+
+/* Container for filter sections */
+.filter-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Filter section labels */
+.filter-section label {
+  display: block;
+  margin-bottom: 12px;
+  color: #80c6a8;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Filter option containers */
+.rating-filter,
+.tags-filter,
+.duration-filter,
+.price-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Individual filter option buttons */
+.rating-option,
+.tag-option,
+.duration-option,
+.price-option {
+  padding: 8px 16px;
+  border: 2px solid rgba(113, 193, 157, 0.3);
+  background: rgba(113, 193, 157, 0.1);
+  color: #80c6a8;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+/* Active state for selected filter options */
+.rating-option.active,
+.tag-option.active,
+.duration-option.active,
+.price-option.active {
+  background: #80c6a8;
+  color: white;
+  border-color: rgba(113, 193, 157, 0.5);
+}
+
+.rating-option:hover,
+.tag-option:hover,
+.duration-option:hover,
+.price-option:hover {
+  transform: translateY(-1px);
+  border-color: 80c6a8;
+}
+
+/* Price level dot indicators */
+.price-dots {
+  margin-left: 4px;
+}
+
+/* Filter modal action buttons */
+.filter-modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+}
+
+.reset-btn,
+.apply-btn {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Reset filters button */
+.reset-btn {
+  background: rgba(113, 193, 157, 0.1);
+  color: #80c6a8;
+  border: 2px solid rgba(113, 193, 157, 0.3);
+}
+
+.reset-btn:hover {
+  background: rgba(113, 193, 157, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Apply filters button */
+.apply-btn {
+  background: #80c6a8;
+  color: #fffef6;
+  border: 2px solid rgba(113, 193, 157, 0.3);
+}
+
+.apply-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(113, 193, 157, 0.3);
+}
+
+/* Fallback for browsers without overlay support */
+@supports not (overflow-y: overlay) {
+  .filter-modal {
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+
+  .filter-modal::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .filter-modal::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .filter-modal::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .filter-modal {
+    padding: 16px;
+    margin: 20px;
+  }
+
+  .rating-filter,
+  .tags-filter,
+  .duration-filter,
+  .price-filter {
+    gap: 6px;
+  }
+
+  .rating-option,
+  .tag-option,
+  .duration-option,
+  .price-option {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}

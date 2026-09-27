@@ -1,0 +1,131 @@
+/* src/components/WelcomePage/WelcomePage.css */
+
+/* Main welcome page container */
+.welcome-page {
+  height: 100vh;
+  background-color: #fffef6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  overflow: hidden;
+}
+
+/* Centered content container s*/
+.welcome-container {
+  background: #aadac4;
+  padding: 60px 35px;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #525252;
+  text-align: center;
+}
+
+/* Header section styling */
+.welcome-header {
+  margin-bottom: 30px;
+}
+
+.welcome-subtitle {
+  color: #525252;
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.welcome-title {
+  color: #525252;
+  margin: 0;
+  font-size: 6rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.welcome-description {
+  color: #525252;
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+/* Button container layout */
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Main action buttons styling */
+.welcome-button {
+  padding: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  color: #525252;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  width: 40%;
+  min-height: 60px;
+  display: block;
+}
+
+/* Temporary bypass button for testing */
+.temp-bypass-button {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.7) 0%,
+    rgba(255, 140, 0, 0.9) 100%
+  ) !important;
+  font-size: 18px !important;
+}
+
+/* Hover effects for buttons */
+.welcome-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.temp-bypass-button:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.8) 0%,
+    rgba(255, 140, 0, 0.95) 100%
+  ) !important;
+}
+
+/* Focus states for accessibility */
+.welcome-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Active state for button press */
+.welcome-button:active {
+  transform: translateY(0);
+}

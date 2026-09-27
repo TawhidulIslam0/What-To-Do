@@ -1,0 +1,221 @@
+/* src/components/UserProfilePage/EditProfileForm.css */
+
+/* Profile picture upload section */
+.profile-picture-upload-modern {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Profile picture preview container */
+.profile-picture-preview-modern {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid rgba(113, 193, 157, 0.4);
+  overflow: hidden;
+  position: relative;
+  background: rgba(113, 193, 157, 0.1);
+  box-shadow: 0 8px 25px rgba(113, 193, 157, 0.15);
+}
+
+.preview-container-modern {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Profile image preview */
+.profile-preview-modern {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Remove picture button */
+.remove-picture-btn-modern {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(113, 193, 157, 0.8);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* File input label styled as button */
+.file-input-label-modern {
+  padding: 8px 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  color: white;
+  border: 2px solid rgba(113, 193, 157, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.file-input-label-modern:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+  border-color: rgba(113, 193, 157, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Form fields container */
+.edit-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input fields for editing */
+.edit-input-modern {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(113, 193, 157, 0.4);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  background: rgba(113, 193, 157, 0.1);
+  color: #71c19d;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.edit-input-modern:focus {
+  outline: none;
+  border-color: rgba(113, 193, 157, 0.7);
+  background: rgba(113, 193, 157, 0.15);
+  box-shadow: 0 0 0 3px rgba(113, 193, 157, 0.2);
+}
+
+.edit-input-modern::placeholder {
+  color: rgba(113, 193, 157, 0.5);
+}
+
+/* Textarea for bio/description */
+.edit-textarea-modern {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(113, 193, 157, 0.4);
+  border-radius: 10px;
+  font-size: 1.05rem;
+  background: rgba(113, 193, 157, 0.1);
+  color: #71c19d;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.edit-textarea-modern:focus {
+  outline: none;
+  border-color: rgba(113, 193, 157, 0.7);
+  background: rgba(113, 193, 157, 0.15);
+  box-shadow: 0 0 0 3px rgba(113, 193, 157, 0.2);
+}
+
+.edit-textarea-modern::placeholder {
+  color: rgba(113, 193, 157, 0.5);
+}
+
+/* Action buttons container */
+.edit-actions-modern {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Save button */
+.save-button-modern {
+  padding: 12px 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  color: white;
+  border: 2px solid rgba(113, 193, 157, 0.3);
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  min-width: 120px;
+}
+
+.save-button-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(113, 193, 157, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+  border-color: rgba(113, 193, 157, 0.5);
+}
+
+/* Cancel button */
+.cancel-button-modern {
+  padding: 12px 24px;
+  background: rgba(113, 193, 157, 0.1);
+  color: #71c19d;
+  border: 2px solid rgba(113, 193, 157, 0.3);
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  min-width: 100px;
+}
+
+.cancel-button-modern:hover {
+  transform: translateY(-2px);
+  background: rgba(113, 193, 157, 0.2);
+  border-color: rgba(113, 193, 157, 0.5);
+  box-shadow: 0 6px 20px rgba(113, 193, 157, 0.2);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .profile-picture-preview-modern {
+    width: 130px;
+    height: 130px;
+  }
+
+  .edit-form-fields {
+    max-width: 100%;
+  }
+
+  .edit-actions-modern {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .save-button-modern,
+  .cancel-button-modern {
+    width: 100%;
+    min-width: auto;
+  }
+}

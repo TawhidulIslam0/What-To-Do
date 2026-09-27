@@ -1,0 +1,143 @@
+/* src/components/UserProfilePage/UserProfilePage.css */
+
+/* Main page container */
+.user-profile-page {
+  min-height: 100vh;
+  background-color: #fffef6;
+  color: #71c19d;
+  overflow-y: auto;
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* Hide scrollbar across all browsers */
+.user-profile-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.user-profile-page::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 0;
+}
+
+.user-profile-page::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.user-profile-page::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.user-profile-page {
+  scrollbar-width: none;
+}
+
+/* Profile header section */
+.profile-header-full {
+  width: 100%;
+  padding: 20px;
+  background: #fffef6;
+}
+
+.profile-header-full .header {
+  margin: 0;
+  width: 100%;
+}
+
+/* Main content area container */
+.profile-content-main {
+  padding: 30px;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Edit profile button positioned top-right */
+.edit-profile-top-right {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 10;
+}
+
+/* Edit profile button styling */
+.edit-profile-btn-small {
+  padding: 12px 24px;
+  background: #aadac4;
+  color: #525252;
+  border: 2px solid rgba(113, 193, 157, 0.3);
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  min-width: 120px;
+}
+
+.edit-profile-btn-small:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(113, 193, 157, 0.3);
+  background: #aadac4;
+  border-color: rgba(113, 193, 157, 0.5);
+}
+
+/* Itinerary container */
+.itinerary-container {
+  background: #aadac4;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto 40px auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #525252;
+}
+
+/* Ensure proper stacking context */
+.profile-content-main,
+.itinerary-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tablet responsive adjustments */
+@media (max-width: 768px) {
+  .profile-content-main {
+    padding: 25px 20px;
+  }
+
+  .profile-header-full {
+    padding: 15px;
+  }
+
+  .edit-profile-top-right {
+    top: 25px;
+    right: 25px;
+  }
+
+  .edit-profile-btn-small {
+    padding: 10px 20px;
+    font-size: 13px;
+    min-width: 100px;
+  }
+
+  .itinerary-container {
+    padding: 25px 20px;
+    margin: 0 auto 30px auto;
+    width: 95%;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 480px) {
+  .profile-content-main {
+    padding: 20px 15px;
+  }
+
+  .itinerary-container {
+    padding: 20px 15px;
+    margin: 0 auto 20px auto;
+  }
+}

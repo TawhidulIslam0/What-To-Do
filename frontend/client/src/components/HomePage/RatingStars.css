@@ -1,0 +1,71 @@
+/* RatingStars.css */
+
+/* Container for rating stars component */
+.rating-stars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Individual rating section */
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Label for rating type */
+.rating-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  min-width: 100px;
+}
+
+/* Container for star icons */
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+/* Individual star styling */
+.star {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: default;
+}
+
+/* Clickable star for user interaction */
+.star.clickable {
+  cursor: pointer;
+}
+
+/* Active (filled) star */
+.star.active {
+  color: gold;
+}
+
+/* Numeric rating value display */
+.rating-value {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 4px;
+}
+
+/* Overall rating display */
+.overall-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Notice text for rating restrictions */
+.rating-notice {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  text-align: center;
+}

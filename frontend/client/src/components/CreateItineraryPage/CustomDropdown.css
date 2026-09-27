@@ -1,0 +1,132 @@
+/* CustomDropdown.css */
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-header {
+  background: #80c6a8;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #525252;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  min-height: 48px;
+}
+
+.dropdown-header:hover {
+  background: #80c6a8;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.dropdown-header.open {
+  background: #80c6a8;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+}
+
+.dropdown-header.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #8eccb1;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  margin-top: 8px;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: overlay;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-list::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 4px 0;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.dropdown-list {
+  scrollbar-width: none;
+}
+
+@supports not (overflow-y: overlay) {
+  .dropdown-list {
+    overflow-y: auto;
+    padding-right: 2px;
+  }
+
+  .dropdown-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .dropdown-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .dropdown-list::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  color: #525252;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background: #80c6a8;
+  transform: translateX(4px);
+}
+
+.dropdown-item.selected {
+  background: #72c09e;
+}
+
+@media (max-width: 768px) {
+  .dropdown-header {
+    padding: 14px 16px;
+    min-height: 52px;
+  }
+
+  .dropdown-item {
+    padding: 14px 16px;
+  }
+}

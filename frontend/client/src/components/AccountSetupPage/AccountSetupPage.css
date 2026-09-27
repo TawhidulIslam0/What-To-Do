@@ -1,0 +1,312 @@
+/* src/components/AccountSetupPage/AccountSetupPage.css */
+
+/* Main page container*/
+.account-setup-page {
+  height: 100vh;
+  background-color: #fffef6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  overflow: hidden;
+}
+
+/* Container for the setup form*/
+.account-setup-container {
+  background: #aadac4;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Header section for the setup page */
+.setup-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.setup-header h1 {
+  color: #525252;
+  margin: 0;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+}
+
+/* Main form container */
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Individual form field group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields for text (username, display name, etc.) */
+.account-setup-page .form-input {
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #8eccb1;
+  color: #525252;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Text area for bio/description field */
+.account-setup-page .form-textarea {
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #8eccb1;
+  color: #525252;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 70px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Focus states for form inputs */
+.account-setup-page .form-input:focus,
+.account-setup-page .form-textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(113, 193, 157, 0.4);
+  background: #80c6a8;
+}
+
+/* Placeholder styling */
+.account-setup-page .form-input::placeholder,
+.account-setup-page .form-textarea::placeholder {
+  color: #525252;
+  text-align: center;
+}
+
+/* Character counter for bio text area */
+.account-setup-page .char-count {
+  text-align: right;
+  color: #525252;
+  font-size: 12px;
+  margin-top: 3px;
+  width: 80%;
+  margin: 3px auto 0 auto;
+}
+
+/* Submit button to complete account setup */
+.account-setup-page .setup-button {
+  padding: 10px;
+  background: #8eccb1;
+  color: #525252;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  width: 30%;
+  height: auto;
+  min-height: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hover and focus states for button */
+.account-setup-page .setup-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  background: #80c6a8;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.account-setup-page .setup-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(113, 193, 157, 0.4);
+  background: #80c6a8;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.account-setup-page .setup-button:active {
+  transform: translateY(0);
+}
+
+/* Back button container */
+.back-button-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+/* Back button to return to previous page */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #80c6a8;
+  color: #525252;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile picture upload section */
+.account-setup-page .profile-picture-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Container for profile picture preview */
+.account-setup-page .profile-picture-preview {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  position: relative;
+  background: #8eccb1;
+}
+
+.account-setup-page .preview-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Actual profile image preview */
+.account-setup-page .profile-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Button to remove uploaded profile picture */
+.account-setup-page .remove-picture-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #80c6a8;
+  color: #525252;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.account-setup-page .remove-picture-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Placeholder when no profile picture is uploaded */
+.account-setup-page .upload-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #525252;
+}
+
+.account-setup-page .upload-placeholder svg {
+  opacity: 0.6;
+  width: 42px;
+  height: 42px;
+}
+
+/* Label/button for file input */
+.account-setup-page .file-input-label {
+  padding: 8px 16px;
+  background: #8eccb1;
+  color: #525252;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  text-align: center;
+}
+
+.account-setup-page .file-input-label:hover {
+  background: #8eccb1;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Hidden actual file input */
+.file-input {
+  display: none;
+}
+
+/* Skip button to bypass profile setup */
+.account-setup-page .skip-button {
+  padding: 10px;
+  background: transparent;
+  color: #525252;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  width: 40%;
+  height: auto;
+  min-height: 38px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.account-setup-page .skip-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: #8eccb1;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #525252;
+}
+
+.account-setup-page .skip-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+  background: #8eccb1;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.account-setup-page .skip-button:active {
+  transform: translateY(0);
+}
+
+/* Container for action buttons (submit and skip) */
+.account-setup-page .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 5px;
+}

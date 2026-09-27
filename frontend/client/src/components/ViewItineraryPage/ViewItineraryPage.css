@@ -1,0 +1,47 @@
+/* src/components/ViewItineraryPage/ViewItineraryPage.css */
+
+/* Sidebar container for itinerary details and navigation */
+.view-itinerary-page .sidebar-container {
+  width: min(400px, 30vw);
+  min-width: 280px;
+  max-width: 450px;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.56) 0%,
+    rgba(113, 193, 157, 0.8) 100%
+  );
+  color: white;
+  overflow-y: overlay;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide scrollbar */
+.view-itinerary-page .sidebar-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.view-itinerary-page .sidebar-container::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 0;
+}
+
+.view-itinerary-page .sidebar-container::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.view-itinerary-page .sidebar-container::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+@supports not (overflow-y: overlay) {
+  .view-itinerary-page .sidebar-container {
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+}
+
+.view-itinerary-page .sidebar-container {
+  scrollbar-width: none;
+}

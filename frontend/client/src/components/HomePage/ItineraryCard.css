@@ -1,0 +1,241 @@
+/* ItineraryCard.css */
+
+/* Main itinerary card container */
+.itinerary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(135deg,
+      rgba(113, 193, 157, 0.56) 0%,
+      rgba(113, 193, 157, 0.8) 100%);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.itinerary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Expanded card state */
+.itinerary-card.expanded {
+  background: #8eccb1;
+}
+
+/* Header section with title and rating */
+.itinerary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg,
+      rgba(113, 193, 157, 0.56) 0%,
+      rgba(113, 193, 157, 0.8) 100%);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  letter-spacing: 0.3px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  gap: 20px;
+}
+
+/* Collapsed description preview */
+.collapsed-description {
+  font-size: clamp(0.75rem, 1.1vw, 0.9rem);
+  margin: 0;
+  padding: 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,
+      rgba(113, 193, 157, 0.56) 0%,
+      rgba(113, 193, 157, 0.8) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  min-height: 60px;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Expanded full description */
+.expanded-description {
+  font-size: clamp(0.75rem, 1.1vw, 0.9rem);
+  margin: 0;
+  padding: 16px;
+  border-radius: 12px;
+  background: #80c6a8;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+/* Star rating display and interaction */
+.rating {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.star {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: clamp(0.9rem, 1.4vw, 1.2rem);
+  transition: all 0.2s ease;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.star.clickable {
+  cursor: pointer;
+}
+
+.star.clickable:hover {
+  transform: scale(1.2);
+  color: gold;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 8px;
+}
+
+.rate-hint {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 8px;
+  font-style: italic;
+}
+
+/* Expanded content animation */
+.expanded-content {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Detailed itinerary information */
+.itinerary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: #80c6a8;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #525252;
+  min-width: 60px;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  font-size: 0.8rem;
+  color: #525252;
+}
+
+/* Tags container and individual tags */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Action buttons in itinerary card */
+.itinerary-card button {
+  background: linear-gradient(135deg,
+      rgba(113, 193, 157, 0.7) 0%,
+      rgba(113, 193, 157, 0.9) 100%);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  margin-top: 8px;
+}
+
+.itinerary-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg,
+      rgba(113, 193, 157, 0.8) 0%,
+      rgba(113, 193, 157, 0.95) 100%);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Fade in animation for expanded content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .itinerary-card {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .detail-label {
+    min-width: auto;
+  }
+
+  .tags-container {
+    gap: 6px;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+
+  .rate-hint {
+    display: none;
+  }
+}

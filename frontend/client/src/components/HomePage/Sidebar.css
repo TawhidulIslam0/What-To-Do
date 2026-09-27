@@ -1,0 +1,294 @@
+/* Sidebar.css */
+
+/* Main sidebar container */
+.sidebar-container {
+  width: min(400px, 30vw);
+  min-width: 280px;
+  max-width: 450px;
+  background: #aadac4;
+  color: #525252;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Sidebar content area */
+.sidebar {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  overflow: scroll;
+  scrollbar-color: #5f5f5f;
+  scrollbar-width: thin;
+}
+
+/* Sidebar main title */
+.sidebar h1 {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  text-align: center;
+  padding: 16px;
+  border-radius: 16px;
+  background: #8eccb1;
+  color: #5f5f5f;
+  letter-spacing: 0.5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar section headers */
+.sidebar h2 {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  text-align: center;
+  padding: 12px;
+  border-radius: 14px;
+  background: #8eccb1;
+  color: #5f5f5f;
+  letter-spacing: 0.5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Search and filter controls */
+.search-filter {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  width: 100%;
+}
+
+/* Search input field */
+.search-filter input[type="text"] {
+  background: #8eccb1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  transition: all 0.3s ease;
+  color: #5f5f5f;
+  text-align: center;
+  padding: 16px;
+  flex: 1;
+  min-height: 50px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.search-filter input[type="text"]:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: #80c6a8;
+}
+
+.search-filter input::placeholder {
+  color: #525252;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Filter button */
+.search-filter button {
+  padding: 16px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #8eccb1;
+  color: #5f5f5f;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  min-height: 50px;
+  white-space: nowrap;
+}
+
+.search-filter button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: #80c6a8;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.search-filter button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: #80c6a8;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Custom scrollbar styling */
+.sidebar-container {
+  overflow-y: auto;
+}
+
+.sidebar-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 0;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background: rgba(95, 95, 95, 0.5);
+  border-radius: 4px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(95, 95, 95, 0.7);
+}
+
+/* Fallback for browsers without overlay support */
+@supports not (overflow-y: auto) {
+  .sidebar-container {
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+
+  .sidebar-container::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .sidebar-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar-container::-webkit-scrollbar-thumb {
+    background: rgba(95, 95, 95, 0.5);
+    border-radius: 4px;
+  }
+}
+
+.sidebar-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(95, 95, 95, 0.5) transparent;
+}
+
+/* Ensure all sidebar components take full width */
+.sidebar > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Create new itinerary header */
+.create-new-header {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-new-header:hover {
+  background: #80c6a8 !important;
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Clear filters button */
+.clear-filters-btn {
+  padding: 14px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #8eccb1;
+  color: #5f5f5f;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 2px;
+  min-height: 48px;
+}
+
+.clear-filters-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: #80c6a8;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  color: #525252;
+  font-style: italic;
+  padding: 20px;
+  background: #80c6a8;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Active filters display */
+.active-filters {
+  margin-bottom: 0px;
+}
+
+/* Filter bubbles container */
+.filter-bubbles-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* Center the bubbles */
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* Individual filter bubbles */
+.filter-bubble {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #8eccb1;
+  color: #5f5f5f;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  animation: bubbleIn 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.filter-bubble-text {
+  font-weight: 500;
+}
+
+.filter-bubble-remove {
+  background: none;
+  border: none;
+  color: #5f5f5f;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.filter-bubble-remove:hover {
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Bubble animation */
+@keyframes bubbleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

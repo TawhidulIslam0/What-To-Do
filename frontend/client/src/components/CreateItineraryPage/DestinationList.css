@@ -1,0 +1,279 @@
+/* DestinationList.css */
+
+/* Main container for destinations list */
+.destinations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Individual destination item */
+.destination-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #80c6a8;
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.destination-item.editing {
+  padding: 16px;
+}
+
+.destination-item:hover {
+  background: #80c6a8;
+  transform: translateY(-1px);
+}
+
+/* Container for order controls and number */
+.destination-order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Move up/down buttons */
+.move-btn {
+  background: #8eccb1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #525252;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.move-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.move-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Destination order number display */
+.destination-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  font-size: 0.9rem;
+  color: #525252;
+  margin: 2px 0;
+}
+
+/* Main destination information area */
+.destination-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Destination name display and edit */
+.destination-name {
+  color: white;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  cursor: default;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.destination-name.editable {
+  cursor: pointer;
+}
+
+.destination-name.editable:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Container for name editing interface */
+.destination-name-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Input field for editing destination name */
+.name-edit-input {
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #525252;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  height: auto;
+  min-height: 48px;
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+}
+
+.name-edit-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: #8eccb1;
+}
+
+.name-edit-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Action buttons for editing */
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.save-edit-btn,
+.cancel-edit-btn {
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  min-height: 36px;
+  white-space: nowrap;
+  flex: 0 1 auto;
+  min-width: 80px;
+}
+
+.save-edit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+}
+
+.cancel-edit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+}
+
+/* Destination address display */
+.destination-address {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+
+/* Destination rating display */
+.destination-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffd700;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.star-icon {
+  color: #ffd700;
+  font-size: 0.9rem;
+}
+
+/* Action buttons container (remove, etc.) */
+.destination-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Remove destination button */
+.remove-btn {
+  background: #8eccb1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #525252;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: rgba(255, 69, 58, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Empty state when no destinations */
+.no-destinations {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .destination-item {
+    flex-wrap: wrap;
+  }
+
+  .destination-actions {
+    margin-left: auto;
+  }
+
+  .edit-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .save-edit-btn,
+  .cancel-edit-btn {
+    min-width: none;
+    width: 100%;
+  }
+}

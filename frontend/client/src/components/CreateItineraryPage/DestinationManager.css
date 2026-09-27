@@ -1,0 +1,72 @@
+/* DestinationManager.css */
+
+/* Container for destination control buttons */
+.destination-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Primary button to add new destinations */
+.add-destination-btn {
+  background: #80c6a8;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #525252;
+  padding: 14px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.add-destination-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #80c6a8;
+}
+
+.add-destination-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Secondary button to clear all destinations */
+.clear-destinations-btn {
+  background: #80c6a8;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #525252;
+  padding: 14px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.clear-destinations-btn:hover {
+  background: #80c6a8;
+  transform: translateY(-1px);
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+  .destination-controls {
+    flex-direction: column;
+  }
+
+  .add-destination-btn {
+    width: 100%;
+  }
+
+  .clear-destinations-btn {
+    width: 100%;
+  }
+}

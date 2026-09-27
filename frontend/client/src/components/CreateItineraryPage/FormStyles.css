@@ -1,0 +1,149 @@
+/* FormStyles.css */
+
+/* Main container for form sections */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Container for form input groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Label styling for form inputs */
+.form-label {
+  color: white;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  letter-spacing: 0.3px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Horizontal row for side-by-side inputs */
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-row .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 160px;
+}
+
+/* Duration dropdown specific styling */
+.duration-dropdown-wrapper .custom-dropdown {
+  width: 120px;
+}
+
+.duration-dropdown-wrapper .dropdown-header {
+  font-size: 0.85rem;
+  padding: 10px 12px;
+  min-height: 44px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.duration-dropdown-wrapper .dropdown-item {
+  font-size: 0.85rem;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+/* Price dropdown specific styling */
+.price-select-wrapper .custom-dropdown {
+  width: 150px;
+}
+
+.price-select-wrapper .dropdown-header {
+  font-size: 0.85rem;
+  padding: 10px 12px;
+  min-height: 44px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.price-select-wrapper .dropdown-item {
+  font-size: 0.85rem;
+  padding: 10px 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Base styling for form inputs and textareas */
+.form-input,
+.form-textarea {
+  background: #8eccb1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #525252;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  transition: all 0.3s ease;
+  font-family: inherit;
+  width: 100%;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: #80c6a8;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #525252;
+}
+
+/* Text area specific styling */
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .form-row .input-group {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .duration-dropdown-wrapper .custom-dropdown,
+  .price-select-wrapper .custom-dropdown {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Small mobile screen styles */
+@media (max-width: 480px) {
+  .form-row {
+    gap: 12px;
+  }
+
+  .duration-dropdown-wrapper .custom-dropdown,
+  .price-select-wrapper .custom-dropdown {
+    max-width: 180px;
+  }
+}

@@ -1,0 +1,423 @@
+/* src/components/LoginPage/LoginPage.css */
+
+/* Main login page container */
+.login-page {
+  height: 100vh;
+  background-color: #fffef6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  overflow: hidden;
+}
+
+/* Login form container */
+.login-container {
+  background: #aadac4;
+  padding: 40px 35px;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #525252;
+}
+
+/* Login header section */
+.login-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-header h1 {
+  color: #525252;
+  margin: 0;
+  font-size: 4rem;
+  letter-spacing: 1px;
+}
+
+/* Main login form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form input fields */
+.form-input {
+  padding: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  color: white;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: 64px;
+  line-height: 1.5;
+}
+
+/* Password input specific styling */
+.password-input-container .form-input {
+  width: 100% !important;
+  padding: 16px 45px 16px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  height: 64px;
+  line-height: 1.5;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Login button */
+.login-button {
+  padding: 12.8px;
+  background: #8eccb1;
+  color: #525252;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  width: 40%;
+  height: auto;
+  min-height: 51.2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: #8eccb1;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.login-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: #8eccb1;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+/* Google login button */
+.google-custom-button {
+  padding: 12.8px;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0;
+  letter-spacing: 1px;
+  font-family: inherit;
+  width: 40%;
+  height: auto;
+  min-height: 51.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.google-custom-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.google-custom-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.google-custom-button:active {
+  transform: translateY(0);
+}
+
+.google-button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.google-logo {
+  flex-shrink: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Switch between login and signup */
+.login-switch {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.login-switch p {
+  color: #525252;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.switch-link {
+  color: #525252 !important;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 18px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+.switch-link:hover {
+  color: #fffef6 !important;
+}
+
+/* Password input wrapper with toggle */
+.password-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-container .form-input {
+  width: 100% !important;
+  padding: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.password-toggle:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.password-toggle:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hide browser password controls */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+
+/* Back button styling */
+.back-button-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.7) 0%,
+    rgba(113, 193, 157, 0.9) 100%
+  );
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.back-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(113, 193, 157, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 0.8) 0%,
+    rgba(113, 193, 157, 0.95) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.back-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Error popup styling */
+.error-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    135deg,
+    rgba(113, 193, 157, 1) 0%,
+    rgba(113, 193, 157, 1) 100%
+  );
+  padding: 20px 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-width: 300px;
+  min-width: 250px;
+  animation: slideDown 0.3s ease-out;
+  color: white;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.error-popup.fade-out {
+  opacity: 0;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.popup-message {
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+/* Slide down animation for popup */
+@keyframes slideDown {
+  from {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
