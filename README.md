@@ -1,70 +1,38 @@
-# What To Do 
+# What To Do
 
-A full-stack travel planning application that helps users discover places in NYC and build personalized itineraries.
+A full-stack travel planning application designed to help users discover top destinations across New York City and curate personalized itineraries.
 
-## Features
-- User registration and login
-- Google OAuth
-- Create and edit itineraries
-- Save itineraries
-- Complete itineraries
-- Google Maps integration
-- Location-based itinerary planning
-- User profiles
-- Secure JWT authentication
+---
 
-## Tech Stack
+## 🌟 Key Features
+
+* **User Authentication:** Secure signup/login with JWT and support for Google OAuth 2.0.
+* **Interactive Map Integration:** Real-time location-based travel planning using the Google Maps JavaScript API.
+* **Itinerary Management:** Create, edit, complete, and save custom itineraries.
+* **Personalized Profiles:** Track upcoming and completed trips directly from user profiles.
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
-- React
-- JavaScript
-- Google Maps JavaScript API
-- Create React App
+* **Core:** React.js, JavaScript (ES6+)
+* **Tooling:** Create React App
+* **APIs:** Google Maps JavaScript API
 
 ### Backend
-- Node.js
-- Express
-- SQLite
-- better-sqlite3
-- JWT
-- bcrypt
+* **Runtime & Framework:** Node.js, Express.js
+* **Database:** SQLite (via `better-sqlite3`)
+* **Security & Auth:** JSON Web Tokens (JWT), bcrypt
 
-## Project Structure
+---
 
+## 📁 Project Structure
+
+```text
 What-To-Do-main/
-├── backend/
-├── frontend/
-├── .env.example
-├── .gitignore
-└── README.md
-
-## Getting Started
-
-### 1. Clone the repository
-
-git clone <your-repository-url>
-
-### 2. Backend
-
-cd backend
-npm install
-npm start
-
-### 3. Frontend
-
-cd frontend
-npm install
-npm start
-
-## Environment Variables
-
-Create your local `.env` files using `.env.example`.
-
-Never commit API keys, OAuth credentials, JWT secrets,
-or local database files.
-
-## Google Maps
-
-The application uses Google Maps to display and organize
-destinations within New York City.
-
+├── backend/          # Express API server & SQLite database
+├── frontend/         # React client application
+├── .env.example      # Sample environment variables template
+├── .gitignore        # Git ignore rules
+└── README.md         # Project documentation
